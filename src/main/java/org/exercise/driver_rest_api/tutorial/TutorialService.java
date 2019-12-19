@@ -1,4 +1,4 @@
-package org.exercise.driver_rest_api.advice;
+package org.exercise.driver_rest_api.tutorial;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

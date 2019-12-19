@@ -1,4 +1,4 @@
-package org.exercise.driver_rest_api.advice;
+package org.exercise.driver_rest_api.tutorial;
 
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
@@ -15,6 +15,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.EntityNotFoundException;
+import javax.validation.Valid;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -71,7 +72,7 @@ public class TutorialController {
     @PostMapping()
     @ResponseStatus(HttpStatus.CREATED)
     @ApiOperation(value = "Creates a new tutorial", notes = "Id and createdDate properties are set on the server side", response = TutorialDto.class)
-    public ResponseEntity createAdvice(@RequestBody TutorialDto tutorialDto) {
+    public ResponseEntity createAdvice(@Valid @RequestBody TutorialDto tutorialDto) {
         //TODO find better solution
         tutorialDto.setId(null);
         tutorialDto.setCreatedDate(null);
