@@ -70,7 +70,6 @@ public class TutorialController {
     }
 
     @PostMapping()
-    @ResponseStatus(HttpStatus.CREATED)
     @ApiOperation(value = "Creates a new tutorial", notes = "Id and createdDate properties are set on the server side", response = TutorialDto.class)
     public ResponseEntity createAdvice(@Valid @RequestBody TutorialDto tutorialDto) {
         //TODO find better solution

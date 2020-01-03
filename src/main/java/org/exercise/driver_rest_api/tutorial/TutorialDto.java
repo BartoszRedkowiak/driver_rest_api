@@ -16,7 +16,7 @@ import java.util.Set;
 
 @Getter
 @Setter
-@ApiModel(description = "Object ")
+@ApiModel(description = "An object containing single tutorial data")
 public class TutorialDto {
 
     @ApiModelProperty(notes = "The unique id of the tutorial")
